@@ -1,19 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package testcouple;
+//package testcouple;
 
-/*
- *
- * @author Goum
- */
 public class Couple {
     
     private int a;
     private int b;
     
+    /*
+     * @pre_cond
+     * @post_cond this.a == 0 && this.b == 0 
+     */
     public Couple() {
     }
     
@@ -31,7 +26,7 @@ public class Couple {
      */
     public Couple(Couple couple) throws NullPointer {
         if(couple == null) {
-            throw new NullPointer("Le parametre couple du constructeur de Couple est nul!");
+            throw new NullPointer("couple", "Couple(Couple couple)");
         }
         this.a = couple.getA();
         this.b = couple.getB();
@@ -55,7 +50,7 @@ public class Couple {
     
     /*
      * @pre_cond
-     * @post_cond this.getA() == a
+     * @post_cond this.a == a
      */
     public void setA(int a) {
         this.a = a;
@@ -63,24 +58,19 @@ public class Couple {
     
     /*
      * @pre_cond
-     * @post_cond this.getB() == b
+     * @post_cond this.b == b
      */
     public void setB(int b) {
         this.b = b;
     }
     
-    @Override
-    public String toString() {
-        return "Couple{" + "a=" + a + ", b=" + b + '}';
-    }
-    
     /*
      * @pre_cond couple != null
      * @post_cond return true if this.a == couple.a && this.b == couple.b else false
-     */
-    public boolean eq(Couple couple) {
+     */ 
+    public boolean eq(Couple couple) throws NullPointer {
         if(couple == null) {
-            throw new NullPointer("Le parametre couple de la methode eq de Couple est nul!");
+        	throw new NullPointer("couple", "eq(Couple couple)");
         }
         return this.a == couple.a && this.b == couple.b;
     }
@@ -91,11 +81,11 @@ public class Couple {
      */
     public boolean lt(Couple couple) throws NullPointer {
         if(couple == null) {
-            throw new NullPointer("Le parametre couple de la methode lt de Couple est nul!");
+            throw new NullPointer("couple", "lt(Couple couple)");
         }
         if(this.a < couple.a) {
             return true;
-        }else if( this.a == couple.a){
+        }else if( this.a == couple.a) {
             return this.b < couple.b;
         }
     
@@ -108,7 +98,7 @@ public class Couple {
      */
     public boolean leq(Couple couple) throws NullPointer {
         if(couple == null) {
-            throw new NullPointer("Le parametre couple de la methode leq de Couple est nul!");
+        	throw new NullPointer("couple", "leq(Couple couple)");
         }
         if(this.a < couple.a) {
             return true;
@@ -125,7 +115,7 @@ public class Couple {
      */
     public boolean neq(Couple couple) throws NullPointer {
         if(couple == null) {
-            throw new NullPointer("Le parametre couple de la methode neq de Couple est nul!");
+        	throw new NullPointer("couple", "neq(Couple couple)");
         }
         return this.a != couple.a || this.b != couple.b;
     }
@@ -136,7 +126,7 @@ public class Couple {
      */
     public boolean gt(Couple couple) throws NullPointer {
         if(couple == null) {
-            throw new NullPointer("Le parametre couple de la methode gt de Couple est nul!");
+        	throw new NullPointer("couple", "gt(Couple couple)");
         }
         if(this.a > couple.a) {
             return true;
@@ -153,7 +143,7 @@ public class Couple {
      */
     public boolean geq(Couple couple) throws NullPointer {
         if(couple == null) {
-            throw new NullPointer("Le parametre couple de la methode eq de Couple est nul!");
+        	throw new NullPointer("couple", "geq(Couple couple)");
         }
         if(this.a > couple.a) {
             return true;
@@ -162,5 +152,10 @@ public class Couple {
         }
     
         return false;
+    }
+    
+    @Override
+    public String toString() {
+        return "Couple{" + "a=" + a + ", b=" + b + '}';
     }
 }

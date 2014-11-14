@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/media/goum/Data/Document/Cours/COO/TP/TP1/TestCouple/src/testcouple/Couple.java</file>
+            <file>file:/media/goum/Data/Document/Cours/COO/TP/TP1/TestCouple/src/testcouple/TestCouple.java</file>
+            <file>file:/media/goum/Data/Document/Cours/COO/TP/TP1/TestCouple/src/testcouple/OutOfArray.java</file>
+            <file>file:/media/goum/Data/Document/Cours/COO/TP/TP1/TestCouple/src/testcouple/NullPointer.java</file>
+            <file>file:/media/goum/Data/Document/Cours/COO/TP/TP1/TestCouple/src/testcouple/NonPositiveSize.java</file>
+            <file>file:/media/goum/Data/Document/Cours/COO/TP/TP1/TestCouple/src/testcouple/TabCouple.java</file>
+            <file>file:/media/goum/Data/Document/Cours/COO/TP/TP1/TestCouple/src/testcouple/EmptyTab.java</file>
+            <file>file:/media/goum/Data/Document/Cours/COO/TP/TP1/TestCouple/src/testcouple/NonGeq.java</file>
+        </group>
     </open-files>
 </project-private>

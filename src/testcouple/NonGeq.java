@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package testcouple;
+//package testcouple;
 
-/**
- *
- * @author Goum
- */
 public class NonGeq extends Exception {
     
-     public NonGeq(String string) {
-         super(string);
+     public NonGeq(String parametreA, String parametreB, String methode) {
+         super("Le paramètre "  + parametreA + " de la méthode " + methode + " doit etre plus grand ou égal au paramétre " + parametreB + "de la méthode "+ methode);
      }
 }
